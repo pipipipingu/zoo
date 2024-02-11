@@ -80,12 +80,23 @@ public class ZooManagement {
                         System.out.println();
                     }
                     System.out.print("Select the zoo to remove: ");
-                    int opt = input.nextInt();
-                    input.nextLine();
-                    zoos.remove(opt - 1);
-                    System.out.println();
-                    System.out.print("Zoo removed successfully.");
-                    System.out.println();
+                    // will cause error when user inputs string
+//                    int opt = input.nextInt();
+//                    input.nextLine();
+//                    zoos.remove(opt - 1);
+                    String zooName = input.nextLine();
+                    int count = zoos.size();
+                    for (Zoo zoo1: zoos) {
+                        if (zoo1.getName().equals(zooName)) {
+                            zoos.remove(zoo1);
+                            count--;
+                            System.out.println();
+                            System.out.print("Zoo removed successfully.");
+                        } else {
+                            System.out.println("Invalid Zoo name entered. Please try again.");
+                            System.out.println();
+                        }
+                    }
                     break;
                 case "C":
                     // kyungjin one
@@ -150,7 +161,7 @@ public class ZooManagement {
                     System.out.println("Choose Zoo to add an enclosure to (enter zoo name): ");
                     String zooName = input.nextLine();
                     for(Zoo selectedZoo : zoos) {
-                        if(selectedZoo.getName().equals(zooName)) {
+                        if (selectedZoo.getName().equals(zooName)) {
                             System.out.println("-----Enclosure Details-----");
                             System.out.println("Enclosure Name: ");
                             String enclosureName = input.nextLine();
@@ -162,9 +173,12 @@ public class ZooManagement {
                         } else {
                             System.out.println("Invalid Zoo name entered. Please try again.");
                         }
-                        break;
                     }
-            }
+                    break;
+                case "B":
+
+
+
         }
 
     }
