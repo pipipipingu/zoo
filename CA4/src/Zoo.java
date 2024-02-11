@@ -52,3 +52,8 @@ public class Zoo {
         this.enclosures = enclosures;
     }
 }
+
+    public void setEnclosures (ArrayList<Enclosure> enclosures) {
+        this.enclosures = enclosures;
+    }
+}
