@@ -78,3 +78,8 @@ public class Enclosure {
         this.animals = animals;
     }
 }
+
+    public void setAnimals(ArrayList<Animal> animals) {
+        this.animals = animals;
+    }
+}
