@@ -160,9 +160,6 @@ public class ZooManagement {
                             selectedZoo.getEnclosures().add(newEnclosure);
                             System.out.println("Enclosure " + enclosureName + " added to Zoo " + zooName + " successfully.");
                         } else {
-                            count--;
-                        }
-                        if(count <= 0){
                             System.out.println("Invalid Zoo name entered. Please try again.");
                         }
                         break;
