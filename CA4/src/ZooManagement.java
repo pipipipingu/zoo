@@ -176,6 +176,7 @@ public class ZooManagement {
                     }
                     break;
                 case "B":
+                    System.out.println("");
 
 
 
